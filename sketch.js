@@ -18,9 +18,9 @@ function setup() {
   
   select = createSelect();
   select.position(slider.x + slider.width + 10, 10);
-  select.option('1');
-  select.option('2');
-  select.option('3');
+  select.option('作品');
+  select.option('教科');
+  select.option('筆記');
   select.changed(handleSelectChange);
   
   button = createButton('Jump');
@@ -78,11 +78,11 @@ function toggleJumping() {
 function handleSelectChange() {
   let selectedValue = select.value();
   iframe.show();
-  if (selectedValue === '1') {
-    iframe.attribute('src', 'https://www.tku.edu.tw/');
-  } else if (selectedValue === '2') {
+  if (selectedValue === '作品') {
+    iframe.attribute('src', 'https://411737025.github.io/202533/');
+  } else if (selectedValue === '教科') {
     iframe.attribute('src', 'https://www.et.tku.edu.tw/');
-  } else if (selectedValue === '3') {
+  } else if (selectedValue === '筆記') {
     iframe.attribute('src', 'https://hackmd.io/V7E_5VTtRLOpcx7A0JxzLQ');
   }
 }
