@@ -25,7 +25,7 @@ function setup() {
   select.changed(handleSelectChange);
   
   button = createButton('Jump');
-  button.position(select.x + select.width + 10, 10);
+  button.position(select.x + select.width + 20, 10);
   button.mousePressed(toggleJumping);
   
   iframe = createElement('iframe');
