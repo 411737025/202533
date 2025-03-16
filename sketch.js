@@ -21,6 +21,7 @@ function setup() {
   select.option('作品');
   select.option('教科');
   select.option('筆記');
+  select.option('第四周');
   select.changed(handleSelectChange);
   
   button = createButton('Jump');
@@ -84,6 +85,9 @@ function handleSelectChange() {
     iframe.attribute('src', 'https://www.et.tku.edu.tw/');
   } else if (selectedValue === '筆記') {
     iframe.attribute('src', 'https://hackmd.io/V7E_5VTtRLOpcx7A0JxzLQ');
+  }else if (selectedValue === '第四周') {
+    iframe.attribute('src', 'https://411737025.github.io/20250310/');
+
   }
 }
 
